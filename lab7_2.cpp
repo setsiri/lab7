@@ -29,7 +29,7 @@ int main(){
 	cout << setw(25) << "Name" << setw(8) << "Score" << setw(8) << "Grade" << "\n";
 	cout << "---------------------------------------------\n";
 	while(i < N){
-		cout << setw(25) << name[i] << setw(8) << score[i] << setw(8) << findGrade(score[i]) << "\n";
+		cout << setw(25) << name[i] << setw(8) << score[i] << setw(8);
 		i++;
 	} 
 	cout << "---------------------------------------------\n";
