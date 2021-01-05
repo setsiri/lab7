@@ -1,9 +1,37 @@
+char findGrade(double x){
+	if(x>90)
+	return 'A';
+	else if(x<=90&&x>75)
+	return 'B';
+	else if(x<=75&&x>60)
+	return 'C';
+	else if(x<=60&&x>45)
+	return 'D';
+	else if(x<=45)
+	return 'F';
+	return 0;
+}
 #include<iostream>
 #include<iomanip>
 #include<string>
 using namespace std;
 
 //[Missing Code 1] Write definition of the function findGrade() here.
+char findGrade(double x){
+	if(x>90)
+	return 'A';
+	else if(x<=90&&x>75)
+	return 'B';
+	else if(x<=75&&x>60)
+	return 'C';
+	else if(x<=60&&x>45)
+	return 'D';
+	else if(x<=45)
+	return 'F';
+	return 0;
+}
+
+
 
 int main(){
 	//Input the number of students
@@ -18,8 +46,10 @@ int main(){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
 		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]);
 		cout << "Score of student " << i+1 << ": ";
 		//[Missing Code 3] Get score of the i-th students.
+		cin >> score[i];
 		i++;
 	}
 	
@@ -29,7 +59,7 @@ int main(){
 	cout << setw(25) << "Name" << setw(8) << "Score" << setw(8) << "Grade" << "\n";
 	cout << "---------------------------------------------\n";
 	while(i < N){
-		cout << setw(25) << name[i] << setw(8) << score[i] << setw(8);
+		cout << setw(25) << name[i] << setw(8) << score[i] << setw(8) << findGrade(score[i]) << "\n";
 		i++;
 	} 
 	cout << "---------------------------------------------\n";
